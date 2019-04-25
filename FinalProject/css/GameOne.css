@@ -1,0 +1,41 @@
+body{
+    background-image:url('../media/gameoneback.jpg');
+    background-repeat:no-repeat;
+    /*background-size:950px auto;*/
+    background-size: cover;
+    background-color:yellow;
+  }
+#container {
+    width: 120px;
+    height: 120px;
+    position: relative;
+}
+#CrazyDog {
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    background-color: none;
+    
+  }
+  button{
+      border: 20px;
+      text-align: center;
+      text-decoration: wavy;
+      display: inline-block;
+      margin: 12px;
+    width:150px;
+    padding:10px;
+    color:white;
+    background-color:hotpink;
+}
+p{
+    color:lightpink;
+  }
+  input{
+      text-align:center;
+  }
+  section{
+    width:1000px;
+    height:580px;
+
+}

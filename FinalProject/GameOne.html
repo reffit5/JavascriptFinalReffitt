@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <Title>Hazel Wants Her Food</Title>
+    <link rel="stylesheet" href="css/GameOne.css" />
+</head>
+<body>
+    <section>
+        <div id ="container">
+                <img alt="Hazel" src="media/hazel.jpg" id ="CrazyDog" width="140px" height="160px" />   
+        </div>
+              
+                <p id="MoveMe1"><img src="media/dogtreat.jpeg" width="100px" height="100px"/></p>
+               </section>
+               <section style="background-color:white;opacity:.8;padding-top:5px;padding-bottom:10px; margin: 60px; height:100px;">
+                  <p style="text-align:center;">
+                  <button id="down"> Hazel Go Down</button>
+                  <button id="up"> Hazel Go Up </button>
+                  <button id="right"> Hazel Go Right</button>
+                  <button id="left"> Hazel Go Left</button>
+                  <button id="stop"> Hazel Sit</button>
+                  
+                  </p>
+                  </section>  
+                  <script src="https://code.jquery.com/jquery-latest.js"></script>
+                  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+                 <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+                       
+    <script>
+
+        var id;
+        var posX=0;
+        var posY=0;
+        var elem = document.getElementById("CrazyDog"); 
+        var con = document.getElementById("container")
+        
+        document.getElementById("down").addEventListener("click",function() {
+          var id = setInterval(frame, 5);
+          posY=elem.y;
+          posX=elem.x; 
+          function frame() {
+            document.getElementById("stop").addEventListener("click",function(){clearInterval(id);});
+            if (posY>=450) {
+              clearInterval(id);
+            } else {
+              posY++; 
+              elem.style.top = posY + 'px'; 
+              document.getElementById("xCoord").value=elem.x;
+              document.getElementById("yCoord").value=elem.y;
+            }
+          }
+        });
+        
+        document.getElementById("up").addEventListener("click",function() {
+          var id = setInterval(frame, 5);
+          posY=elem.y;
+          posX=elem.x; 
+          function frame() {
+            document.getElementById("stop").addEventListener("click",function(){clearInterval(id);});
+            if (posY <= 150) {
+              clearInterval(id);
+            } else {
+              posY--; 
+              elem.style.top = posY + 'px'; 
+              document.getElementById("xCoord").value=elem.x;
+              document.getElementById("yCoord").value=elem.y;
+            }
+          }
+        });
+        
+        document.getElementById("right").addEventListener("click",function() {
+          posY=elem.y;
+          posX=elem.x; 
+          var id = setInterval(frame, 5);
+          function frame() {
+            document.getElementById("stop").addEventListener("click",function(){clearInterval(id);});
+            if (posX >= 1050) {
+              clearInterval(id);
+            } else {
+              posX++;
+              elem.style.left = posX + 'px'; 
+              document.getElementById("xCoord").value=elem.x;
+              document.getElementById("yCoord").value=elem.y;
+            }
+          }
+        });
+        
+        document.getElementById("left").addEventListener("click",function() {
+          posY=elem.y;
+          posX=elem.x; 
+          var id = setInterval(frame, 5);
+          function frame() {
+            document.getElementById("stop").addEventListener("click",function(){clearInterval(id);});
+            if (posX <= 50) {
+              clearInterval(id);
+            } else {
+              posX--;
+              elem.style.left = posX + 'px'; 
+              document.getElementById("xCoord").value=elem.x;
+              document.getElementById("yCoord").value=elem.y;
+            }
+          }
+        });
+
+        $(function()
+                       {
+                           $("#MoveMe1").draggable();
+                          });
+        
+        </script>      
+
+
+        
+
+</body>
+</html>

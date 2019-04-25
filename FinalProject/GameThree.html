@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+   body{
+      background-image: url(media/zezel.jpg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-color: aqua;
+      background-size: 500px;
+      background-position-y: 50px;
+   }
+section{
+  display:flex;
+  flex-wrap:wrap;
+}
+h1{
+    text-align: center;
+    color: yellow;
+    font-size: 24px;
+}
+
+</style>
+   <script src="https://code.jquery.com/jquery-latest.js"></script>
+   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"><script>
+      $(function()
+        {
+            $("#MoveMe1").draggable();
+            $("#MoveMe2").draggable();
+            $("#MoveMe3").draggable();
+            $("#MoveMe4").draggable();
+            $("#MoveMe5").draggable();
+            $("#MoveMe6").draggable();                       
+            
+        });
+</script>
+<title>Dress Hazel Up</title>
+</head>
+
+<body>
+
+   <h1>Hazel Dress Up Party</h1>
+   
+   <section>
+   <p id="MoveMe1"><img src="media/dj.png" /></p>
+   <p id="MoveMe6"><img src="media/hat.png" /></p>       
+   <p id="MoveMe2"><img src="media/headphones.png" /></p>
+   <p id="MoveMe3"><img src="media/lasso.png" /></p>
+   <p id="MoveMe4"><img src="media/tiara.png" /></p>
+   <p id="MoveMe5"><img src="media/wand.png" /></p>
+   </section>
+</body>
+</html>
+
